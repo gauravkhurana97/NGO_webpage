@@ -96,7 +96,7 @@
       margin: 0 10px;
       text-decoration: none;
       font-size: 16px;
-      color:  #012d91 }
+      color: #f755f9; }
       .navigation ul li a:before {
         position: absolute;
         content: '';
@@ -104,8 +104,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border-top: 2px solid #719CFE;
-        border-left: 2px solid #719CFE;
+        border-top: 2px solid #9d059f;
+        border-left: 2px solid #9d059f;
         box-sizing: border-box;
         transform-origin: left;
         transition: .5s; }
@@ -122,8 +122,8 @@
         right: 0;
         width: 100%;
         height: 100%;
-        border-bottom: 2px solid #719CFE;
-        border-right: 2px solid #719CFE;
+        border-bottom: 2px solid #9d059f;
+        border-right: 2px solid #9d059f;
         box-sizing: border-box;
         transform-origin: right;
         transition: .5s; }
@@ -174,9 +174,9 @@ body {
 
 .header {
   height: 85vh;
-  background: -webkit-linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+  background: -webkit-linear-gradient(to right, #719CFE, #012d91);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+  background: linear-gradient(to right, #719CFE, #012d91);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-position: top;
@@ -188,7 +188,7 @@ body {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 10rem; }
+    height: 3.5rem; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -227,8 +227,13 @@ body {
   padding: 15rem 0; }
 
 .section-book {
-  padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #719CFE, #012d91); }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  background-color: white;
+  margin-top: 8rem; }
 
 .scrollTop {
   position: fixed;
@@ -291,6 +296,15 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
 
+.alert {
+  text-align: center;
+  padding: 10px;
+  background: #719CFE;
+  color: white;
+  width: 90%;
+  margin-bottom: 10px;
+  display: none; }
+
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -302,7 +316,7 @@ body {
   letter-spacing: .2rem;
   transition: all .2s; }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    letter-spacing: .5rem;
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -445,7 +459,6 @@ body {
   border-top: 1px solid #777;
   padding-top: 2rem;
   width: 80%;
-  font-size: 1.5rem;
   margin: 0 auto; }
 
 .footer__list {
@@ -557,3 +570,98 @@ body {
     height: 100%;
     object-fit: cover;
     display: block; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 3rem 3rem; }
+
+::selection {
+  background-color: #719CFE;
+  color: #fff; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid black;
+  width: 90%;
+  display: block;
+  transition: all .3s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #719CFE; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #719CFE; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+  font-size: 2rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #719CFE;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.4rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #719CFE;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
