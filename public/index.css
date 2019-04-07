@@ -16,6 +16,19 @@
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
+
+  @keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+  }
+  
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -44,6 +57,11 @@
     opacity: 1;
     transform: translate(0); } }
 
+  #bootstrap_navigation
+  {
+    color: white;
+    background: linear-gradient(to right, #719CFE, #012d91);
+  }
 .loading {
   position: absolute;
   top: 0;
@@ -202,7 +220,7 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 15rem 0;
   margin-top: -20vh;
   text-align: center; }
 
@@ -437,9 +455,10 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7;
-  margin-top: -11rem;
+  /* margin-top: -11rem; */
   background: linear-gradient(to right, #719CFE, #012d91);
-  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%); }
+  clip-path: polygon(0 24%, 100% 0, 100% 100%, 0% 100%);
+ }
 
 .footer__copyright {
   border-top: 1px solid #777;
@@ -557,3 +576,668 @@ body {
     height: 100%;
     object-fit: cover;
     display: block; }
+
+
+    #quote-carousel {
+      padding: 0 10px 30px 10px;
+      margin-top: 60px;
+  }
+  #quote-carousel .carousel-control {
+      background: none;
+      color: white;
+      font-size: 2.3em;
+      text-shadow: none;
+      margin-top: 30px;
+  }
+  #quote-carousel .carousel-indicators {
+      position: relative;
+      right: 50%;
+      top: auto;
+      bottom: 0px;
+      margin-top: 20px;
+      margin-right: -19px;
+  }
+  #quote-carousel .carousel-indicators li {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      opacity: 0.4;
+      overflow: hidden;
+      transition: all .4s ease-in;
+      vertical-align: middle;
+  }
+  #quote-carousel .carousel-indicators .active {
+      width: 128px;
+      height: 128px;
+      opacity: 1;
+      transition: all .2s;
+  }
+  .item blockquote {
+      border-left: none;
+      margin: 0;
+  }
+  .item blockquote p:before {
+      content: "\f10d";
+      
+      font-family: 'Fontawesome';
+      float: left;
+      margin-right: 10px;
+  }
+
+    
+    @media (max-width: 1400px) {
+      body{
+        padding: 0px;
+      }
+      .navigation{
+        display: block;
+      }
+      #bootstrap_navigation{
+        display: none;
+      }
+      #black_box{
+        display: none;
+      }
+
+
+    .header {
+      height: 85vh;
+      background: -webkit-linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-size: cover;
+      background-position: top;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 95vh; }
+      .header__logo-box {
+      position: absolute;
+      top: 4rem;
+      left: 4rem; }
+    .header__logo {
+      height: 10rem; }
+    .header__text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+      .heading-primary {
+        color: #fff;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 6rem; }
+        .heading-primary--main {
+          display: block;
+          font-size: 3rem;
+          font-weight: 400;
+          margin-bottom: 3rem; 
+          letter-spacing: 2.5rem;
+          animation-name: moveInLeft;
+          animation-duration: 1s;
+          animation-timing-function: ease-out; }
+        .heading-primary--sub {
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: 1.75rem;
+          animation: moveInRight 1s ease-out; }
+    
+    .paragraph{
+      padding: 4rem;
+      padding-top: 0rem;
+
+      font-size: 1.6rem;
+    }
+      .paragraph:not(:last-child) {
+        margin-bottom: -2rem; }
+    
+
+        .row{
+        margin: 0 auto;}  
+
+        .shadow{
+          position: relative;
+          width: 100%;
+          height: 250px;
+          background: linear-gradient(0deg, #000, #262626);
+          color: white;
+        
+        }
+        .shadow:before,
+        .shadow:after
+        {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+          background-size: 400%;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
+          z-index: -1;
+          animation: animate 20s linear infinite;
+        }
+        .shadow:after
+        {
+          filter: blur(20px);
+        }  
+        .portfolio{
+          padding: 25rem 0 15rem;
+        }
+        .portfolio>.row{
+          margin: 0 auto;
+        }
+      }
+
+     @media (max-width: 1200px) {
+      
+      body{
+        padding: 0px;
+      }
+      .navigation{
+
+        display: none;
+      }
+      #bootstrap_navigation{
+        display: block;
+      }
+      .header {
+        margin-top: -20px;
+
+        height: 95vh;
+        background: -webkit-linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        }
+        .header__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+      width: 40px;
+    height: 40px; }
+      .header__logo {
+        display: none; }
+      .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; }
+    .heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+    .btn, .btn:link, .btn:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all .2s;
+      position: relative;
+      font-size: 1.6rem;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+     }
+    
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10rem 0 10rem;
+  margin-top: -20vh;
+  text-align: center;
+ }
+ .row .col-1-of-2 {
+  width: 100%;
+  display: block;
+}
+   .u-margin-bottom-big{
+    margin-bottom: 0rem !important; }
+
+  .heading-tertiary{
+
+  }
+  .u-margin-bottom-small {
+    margin-bottom: 0rem !important; }
+    .paragraph{
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+      .paragraph:not(:last-child) {
+        margin-bottom: 0rem; }
+
+        
+.composition {
+  position: relative;
+  margin-top: 5rem;
+  padding: 2rem;
+ }
+  .composition__photo {
+    width: 35%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    
+    .composition__photo--p1 {
+      left: 14rem;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 16rem;
+      top: 0rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #719CFE;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+    .composition__photo:hover .composition__photo__photo:not(:hover) {
+      transform: scale(0.95); }  
+      .section-features {
+        padding: 10rem 0;
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #719CFE, #012d91);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        transform: skewY(-7deg);
+        margin-top: 30rem;
+      overflow: hidden; 
+    text-align: center;}
+      .row{
+        text-align: center;
+      }  
+      .row .col-1-of-3 {
+          display: block;
+          width: 100%;
+        }
+      .shadow{
+      position: relative;
+      width: 80%;
+      margin: 0 auto 3rem;
+      height: 250px;
+      background: linear-gradient(0deg, #000, #262626);
+      color: white;
+    }.shadow:before,
+    .shadow:after
+    {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: animate 20s linear infinite;
+    }
+    .shadow:after
+    {
+      filter: blur(20px);
+    }
+ 
+    
+    .portfolio>.row{
+      margin: 0 auto;
+    }
+    .col-1-of-3{
+      display: block;
+      width: 100%;
+    }
+    .col-1-of-3 > figure{
+      /* display: block;
+       */
+       width: 80%;
+       text-align: center;
+      margin: 0rem  auto 2rem;
+      }
+      .footer {
+        padding: 0rem 0;
+        margin-top:106rem; 
+      }#make_down{
+        margin-top: 4rem;
+        margin-bottom: -8rem;
+      }
+      .footer__copyright{
+        margin-top: -6rem;
+      }
+  }
+    
+    
+      
+      @media (max-width: 720px) {
+        body{
+          padding: 0px;
+        }
+        .navigation{
+          display: none;
+        }
+        #bootstrap_navigation{
+          display: block;
+        }
+        .header {
+          margin-top: -20px;
+  
+          height: 95vh;
+          background: -webkit-linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background-size: cover;
+          background-position: top;
+          position: relative;
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          }
+          .header__logo-box {
+          position: absolute;
+          top: 4rem;
+          left: 4rem;
+        width: 40px;
+      height: 40px; }
+        .header__logo {
+          display: none; }
+        .header__text-box {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center; }
+      .heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem; }
+    .heading-primary--main {
+      display: block;
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 3rem; 
+      letter-spacing: 2.5rem;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; }
+    .heading-primary--sub {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1.75rem;
+      animation: moveInRight 1s ease-out; }
+      .btn, .btn:link, .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+        background-color: white;
+        border: none;
+        cursor: pointer; }
+        
+      .composition__photo--p1 {
+        left: 11rem;
+        top: -2rem; }
+      .composition__photo--p2 {
+        right: 11rem;
+        top: 0rem; }
+      .composition__photo--p3 {
+        left: 20%;
+        top: 10rem; }
+        
+      .composition__photo:hover {
+        outline: 1.5rem solid #719CFE;
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+        z-index: 20; }
+        
+        .section-features {
+          padding: 10rem 0;
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #719CFE, #012d91);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background-size: cover;
+          transform: skewY(-7deg);
+          margin-top: 15rem;
+        overflow: hidden; 
+      text-align: center;}
+      .row{
+        text-align: center;
+      }  
+      .row .col-1-of-3 {
+          display: block;
+          width: 100%;
+        }
+       .shadow{
+        position: relative;
+        width: 80%;
+        margin: 0 auto 3rem;
+        height: 250px;
+        background: linear-gradient(0deg, #000, #262626);
+        color: white;
+      }.shadow:before,
+      .shadow:after
+      {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+        background-size: 400%;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        z-index: -1;
+        animation: animate 20s linear infinite;
+      }
+      .shadow:after
+      {
+        filter: blur(20px);
+      }
+      
+      .portfolio>.row{
+        margin: 0 auto;
+      }
+      .col-1-of-3{
+        display: block;
+        width: 100%;
+      }
+      .col-1-of-3 > figure{
+        /* display: block;
+         */
+         width: 80%;
+         text-align: center;
+        margin: 0rem  auto 2rem;
+        }
+        .footer {
+          padding: 0rem 0;
+          margin-top:105rem; 
+        }
+        #make_down{
+          margin-top: 4rem;
+          margin-bottom: -8rem;
+        }
+        .footer__copyright{
+          margin-top: -6rem;
+        }
+      }
+  
+      @media (max-width: 500px) 
+      {
+
+        body{
+          padding: 0px;
+        }
+        .navigation{
+          display: none;
+        }
+        #bootstrap_navigation{
+          display: block;
+        }
+        .header {
+          margin-top: -20px;
+          height: 95vh;
+          background: -webkit-linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #719CFE, #012d91),url("https://www.smilefoundationindia.org/images/home/2019.jpg");
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background-size: cover;
+          background-position: top;
+          position: relative;
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          }
+          .header__logo-box {
+          position: absolute;
+          top: 4rem;
+          left: 4rem;
+        width: 40px;
+      height: 40px; }
+        .header__logo {
+          display: none; }
+        .header__text-box {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center; }
+      .heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem; }
+    .heading-primary--main {
+      display: block;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 1.5rem;
+      margin-bottom: 4rem;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; }
+    .heading-primary--sub {
+      display: block;
+      font-size: 1rem;
+      line-height: 2rem;
+      font-weight: 700;
+      letter-spacing: 1rem;
+      animation: moveInRight 1s ease-out; }
+      .btn, .btn:link, .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        padding-bottom:2rem; 
+        position: relative;
+        font-size: 1.6rem;
+        background-color: white;
+        border: none;
+        cursor: pointer; }
+        .composition__photo {
+          width: 200px;
+           }
+          
+      .composition__photo--p1 {
+        left: 7rem;
+        top: -2rem; }
+      .composition__photo--p2 {
+        right: 6rem;
+        top: 0rem; }
+      .composition__photo--p3 {
+        left: 20%;
+        top: 10rem; }
+        .section-features {
+          padding: 10rem 0;
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #719CFE, #012d91);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background-size: cover;
+          transform: skewY(-7deg);
+          margin-top: 15rem;
+        overflow: hidden; 
+      text-align: center;}
+      .row{
+        text-align: center;
+      }  
+      .row .col-1-of-3 {
+          display: block;
+          width: 100%;
+        }
+       .shadow{
+        position: relative;
+        width: 80%;
+        margin: 0 auto 3rem;
+        height: 250px;
+        background: linear-gradient(0deg, #000, #262626);
+        color: white;
+      }.shadow:before,
+      .shadow:after
+      {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+        background-size: 400%;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        z-index: -1;
+        animation: animate 20s linear infinite;
+      }
+      .shadow:after
+      {
+        filter: blur(20px);
+      }
+      
+      .portfolio>.row{
+        margin: 0 auto;
+      }
+      .col-1-of-3{
+        display: block;
+        width: 100%;
+      }
+      .col-1-of-3 > figure{
+        /* display: block;
+         */
+         width: 80%;
+         text-align: center;
+        margin: 0rem  auto 2rem;
+        }
+        #make_down{
+          margin-top: 4rem;
+          margin-bottom: -8rem;
+        }
+        .footer__copyright{
+          margin-top: -6rem;
+        }
+        }
+
