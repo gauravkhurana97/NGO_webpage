@@ -175,7 +175,9 @@ video {
   .hero h1 span:nth-child(15) {
     animation-delay: 5.5s;
   }
-
+  .hero h1 span:nth-child(16) {
+    animation-delay: 5.75s;
+  }
 /*responsive*/
 @media (max-width:992px) {
   video {
@@ -212,49 +214,102 @@ video {
     font-size: .7rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: .2em;
+ }
 
-  }
+ 
 
 }
-/*cel*/
-@media (max-width:600px) {
-  video {
-    object-fit: cover;
-    width: 100%;
-    align-items: center;
-    max-width: 640px;
-    padding-top: 50%;
 
-  }
-}
 
 @media (max-width: 1100px) {
     .move_to_website a {
       font-size: 75px;
     }
   
+     
     .hero h1 {
-    font-size: 1.3rem;
-     }
+      font-size: 3.4rem;
+       }
+       #break{
+        display: block;
+      }
+      
+.move_to_website {
+  position: absolute;
+  content: "";
+  top: 5rem;
+  right: 5rem;
+  width: 100px;
+  z-index: 1000;
+  height: 100px;
+  text-align: center;
+}
   }
 
-@media (max-width: 767.98px) {
+  @media (max-width:600px) {
+    video {
+      object-fit: cover;
+      width: 100%;
+      align-items: center;
+      max-width: 640px;
+      padding-top: 50%;
+  
+    }
+  }
+  
+@media (max-width: 900.98px) {
     .move_to_website a {
       font-size: 70px;
     }
   
     .hero h1 {
-    font-size: 1rem;
+    font-size: 2.4rem;
      }
+     #break{
+      display: block;
+    }
   }
 
 
   @media (max-width: 500.98px) {
     .move_to_website a {
-      font-size: 60px;
+      font-size: 80px;
     }
   
     .hero h1 {
-    font-size: 1rem;
-     }
+      font-size: 1.6rem;
+       }
   }
+
+
+  @media(max-width:500px){
+    .move_to_website {
+      position: absolute;
+      content: "";
+      top: 3rem;
+      right:3rem;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .move_to_website a {
+      width: 100px;
+      cursor: pointer;
+      height: 100px;
+      font-size: 80px;
+    }
+    #break{
+      display: block;
+    }
+}
+
+
+@media (max-width: 330.98px) {
+  .move_to_website a {
+    font-size: 80px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+     }
+}
